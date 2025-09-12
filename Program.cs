@@ -1,6 +1,4 @@
-﻿using GameShop.App.ViewsComponents;
-using GameShop.Interfaces;
-using GameShop.Views.SingleView;
+﻿using GameShop.App;
 
 namespace GameShop
 {
@@ -8,8 +6,8 @@ namespace GameShop
     {
         static void Main(string[] args)
         {
-            FrameManager a = new();
-            a.FrameInit();
+            Console.CursorVisible = false;
+            AppManager app = new();
         }
     }
 }
