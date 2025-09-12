@@ -1,0 +1,5 @@
+﻿enum ViewType
+{
+    Intro,
+    Start,
+}

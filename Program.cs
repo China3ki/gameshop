@@ -1,10 +1,15 @@
-﻿namespace GameShop
+﻿using GameShop.App.ViewsComponents;
+using GameShop.Interfaces;
+using GameShop.Views.SingleView;
+
+namespace GameShop
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            FrameManager a = new();
+            a.FrameInit();
         }
     }
 }
