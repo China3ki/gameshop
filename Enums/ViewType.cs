@@ -2,4 +2,8 @@
 {
     Intro,
     Start,
+    Register,
+    Login,
+    Language,
+    Exit,
 }

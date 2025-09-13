@@ -1,4 +1,5 @@
 ﻿using GameShop.Views.NormalViews;
+using System.Diagnostics;
 using System.Xml;
 
 namespace GameShop.App
@@ -17,7 +18,7 @@ namespace GameShop.App
         static public List<string> GetData(ViewType viewType, DataType dataType)
         {
             string language = Language == Language.Polski ? "polski.xml" : "angielski.xml";
-            string fileLocation = $"..\\..\\Language\\{language}";
+            string fileLocation = $"..\\..\\..\\Language\\{language}";
             XmlNodeList? nodeList;
             List<string> list;
             string path = GetPath(viewType, dataType);
@@ -32,8 +33,9 @@ namespace GameShop.App
                 throw new Exception(e.Message);
             }
             nodeList = langDoc.SelectNodes(path);
-            if (nodeList != null) list = nodeList.Cast<XmlNode>().Select(n => n.InnerText).ToList();
+            if (nodeList != null) list = nodeList.Cast<XmlNode>().Select(n => n.InnerText).ToList(); // Do naprawy
             else throw new NotImplementedException();
+            Debug.WriteLine(list[1]);
             return list;
         }
         /// <summary>
@@ -50,7 +52,7 @@ namespace GameShop.App
             {
                 return viewType switch
                 {
-                    ViewType.Start => "start/optionlist",
+                    ViewType.Start => "gameshop/start/optionlist",
                     _ => throw new NotImplementedException()
                 };
             }
@@ -58,12 +60,11 @@ namespace GameShop.App
             {
                 return viewType switch
                 {
-                    ViewType.Start => "start/infolist",
+                    ViewType.Start => "gameshop/start/infolist",
                     _ => throw new NotImplementedException()
                 };
             }
             else throw new NotImplementedException();
         }
-
     }
 }

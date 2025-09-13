@@ -1,4 +1,5 @@
 ﻿using GameShop.Interfaces;
+using GameShop.Views.NormalViews;
 using GameShop.Views.SingleViews;
 
 namespace GameShop.App
@@ -27,6 +28,9 @@ namespace GameShop.App
                 case ViewType.Intro:
                     view = new Intro(ViewType.Start, ["   ____                      ____  _                 ", "  / ___| __ _ _ __ ___   ___/ ___|| |__   ___  _ __  ", " | |  _ / _` | '_ ` _ \\ / _ \\___ \\| '_ \\ / _ \\| '_ \\ ", " | |_| | (_| | | | | | |  __/___) | | | | (_) | |_) |", "  \\____|\\__,_|_| |_| |_|\\___|____/|_| |_|\\___/| .__/ ", "                                              |_|    "]);
                     view.InitView();
+                    break;
+                case ViewType.Start:
+                    view = new StartView(ViewType.Start);
                     break;
                 default:
                     throw new NotImplementedException();

@@ -7,8 +7,8 @@ namespace GameShop
     {
         static void Main(string[] args)
         {
-            //Console.CursorVisible = false;
-            //AppManager app = new();
+            Console.CursorVisible = false;
+            AppManager app = new();
         }
     }
 }

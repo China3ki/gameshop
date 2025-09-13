@@ -2,7 +2,7 @@
 <gameshop>
 	<start>
 		<optionlist>
-			<option1>Menu Start</option1>
+			<option1> == Menu Start == </option1>
 			<option2>Logowanie</option2>
 			<option2>Rejestracja</option2>
 			<option3>Zmiana języka</option3>
