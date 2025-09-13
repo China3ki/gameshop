@@ -2,14 +2,14 @@
 
 namespace GameShop.App.ViewsComponents
 {
-    internal class FrameManager
+    static internal class FrameManager
     {
         /// <summary>
         /// Initializes and renders a frame around the console window, including a logo at the top.
         /// </summary>
         /// <remarks>This method dynamically adjusts the frame dimensions based on the current console
         /// window size. The frame consists of box-drawing characters, with the logo centered at the top.</remarks>
-        public void FrameInit()
+        static public void FrameInit()
         {
             int width = Console.WindowWidth;
             int height = Console.WindowHeight;

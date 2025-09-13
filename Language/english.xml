@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gameshop>
+	<start>
+		<optionlist>
+			<option1>Menu Start</option1>
+			<option2>Login</option2>
+			<option2>Register</option2>
+			<option3>Change language</option3>
+			<option4>Exit</option4>
+		</optionlist>
+		<infolist>
+			<info1>Welcome in GameShop!</info1>
+			<info2>Choose one of the options to continue.</info2>
+		</infolist>
+	</start>
+	<login>
+		<optionlist>
+			<option1>Login</option1>
+			<option2>Nickname:</option2>
+			<option3>Password:</option3>
+			<option4>View password</option4>
+			<option5>Login</option5>
+			<option6>Back</option6>
+		</optionlist>
+	</login>
+	<register>
+		<optionlist>
+			<option1>Register</option1>
+			<option2>Nickname:</option2>
+			<option3>Password:</option3>
+			<option4>Repeat password:</option4>
+			<option5>View passwords</option5>
+			<option6>Register</option6>
+			<option7>Back</option7>
+		</optionlist>>
+	</register>
+	<language>
+		<optionlist>
+			<option1>language</option1>
+			<option2>Polski</option2>
+			<option3>English</option3>
+			<option4>Back</option4>
+		</optionlist>
+	</language>
+</gameshop>

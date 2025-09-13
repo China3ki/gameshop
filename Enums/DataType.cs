@@ -1,0 +1,5 @@
+﻿enum DataType 
+{
+    OptionList,
+    InfoList
+}

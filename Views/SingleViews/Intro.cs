@@ -1,7 +1,7 @@
 ﻿using GameShop.Interfaces;
 using System.Text;
 
-namespace GameShop.Views.SingleView
+namespace GameShop.Views.SingleViews
 {
     internal class Intro(ViewType nextView, string[] info) : InfoView(nextView, info)
     {

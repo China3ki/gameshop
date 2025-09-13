@@ -1,16 +1,15 @@
 ﻿using GameShop.App.ViewsComponents;
 using GameShop.Interfaces;
 
-namespace GameShop.Views.SingleView
+namespace GameShop.Views.SingleViews
 {
     internal class InfoView(ViewType nextView, string[] info) : IViewProvider
     {
         private readonly ViewType _nextView = nextView;
         private readonly string[] _info = info;
-        static protected FrameManager _frameManager = new();
         public virtual void InitView()
         {
-            _frameManager.FrameInit();
+            FrameManager.FrameInit();
             RenderInfo();
         }
         public ViewType NextView()

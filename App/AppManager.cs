@@ -1,5 +1,5 @@
 ﻿using GameShop.Interfaces;
-using GameShop.Views.SingleView;
+using GameShop.Views.SingleViews;
 
 namespace GameShop.App
 {

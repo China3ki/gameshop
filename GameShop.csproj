@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\FormViews\" />
+    <Folder Include="Views\NormalViews\" />
+  </ItemGroup>
+
 </Project>
