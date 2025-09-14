@@ -36,10 +36,28 @@
 	</register>
 	<language>
 		<optionlist>
-			<option1>Język</option1>
+			<option1> == Język == </option1>
 			<option2>Polski</option2>
 			<option3>English</option3>
 			<option4>Powrót</option4>
 		</optionlist>
+		<infolist>
+			<info1>Wybierz jedną z dostępnych opcji aby zmienić język.</info1>
+		</infolist>
 	</language>
+	<outro>
+		<infolist>
+			<info1>Dziękujemy za korzystanie z naszych usług!</info1>
+			<info2>GameShop - 2025</info2>
+		</infolist>
+	</outro>
+	<error>
+		<infolist>
+			<info1>Taki widok nie istnieje!</info1>
+			<info2>Nie udało się połączyć z bazą danych!</info2>
+			<info3>Plik nie istnieje!</info3>
+			<info4>Spróbuj ponownie póżniej lub pobierz gameshop ponownie!</info4>
+			<info5>Kliknij Enter aby wyjść.</info5>
+		</infolist>
+	</error>
 </gameshop>

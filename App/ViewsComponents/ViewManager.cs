@@ -1,11 +1,12 @@
-﻿namespace GameShop.App.ViewsComponents
+﻿
+namespace GameShop.App.ViewsComponents
 {
     internal class ViewManager
     {
         private RenderManager _renderManager = new();
         private InfoManager _infoManager = new();
         private int _maxSizeOfPage; // Paginacja do dodania
-        private int _numbersOfElements = 0;
+        private int _numberOfElements;
 
         public int InitViewManager()
         {
@@ -26,7 +27,7 @@
         public void AddElementOfMenu(string element, ConsoleColor fontColor, ConsoleColor backgroundColor)
         {
             _renderManager.AddElement(element, fontColor, backgroundColor);
-            _numbersOfElements++;
+            _numberOfElements++;
         }
         public void AddElementOfInfo(string element, ConsoleColor fontColor, ConsoleColor backgroundColor)
         {
@@ -41,13 +42,17 @@
         /// <returns>The final position as determined by the user's input.</returns>
         private int ChangePositon()
         {
-            PositionManager positionManager = new(_numbersOfElements, _numbersOfElements);
+            PositionManager positionManager = new(_numberOfElements, _numberOfElements);
             ConsoleKey key;
             do
             {
                 key = Console.ReadKey(true).Key;
                 positionManager.ChangePosition(key);
-                _renderManager.ChangeColorOfOption(positionManager.Position, key);
+                if (key == ConsoleKey.UpArrow || key == ConsoleKey.DownArrow)
+                {
+                    _renderManager.ChangeColorOfOption(positionManager.Position, key);
+                }
+
             } while (key != ConsoleKey.Enter);
             return positionManager.Position;
         }

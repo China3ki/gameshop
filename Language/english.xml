@@ -2,7 +2,7 @@
 <gameshop>
 	<start>
 		<optionlist>
-			<option1>Menu Start</option1>
+			<option1> == Start Menu == </option1>
 			<option2>Login</option2>
 			<option2>Register</option2>
 			<option3>Change language</option3>
@@ -32,14 +32,32 @@
 			<option5>View passwords</option5>
 			<option6>Register</option6>
 			<option7>Back</option7>
-		</optionlist>>
+		</optionlist>
 	</register>
 	<language>
 		<optionlist>
-			<option1>language</option1>
+			<option1> == Language == </option1>
 			<option2>Polski</option2>
 			<option3>English</option3>
 			<option4>Back</option4>
 		</optionlist>
+		<infolist>
+			<info1>Choose one of the available option to change language.</info1>
+		</infolist>
 	</language>
+	<outro>
+		<infolist>
+			<info1>Thank you for using our services!</info1>
+			<info2>GameShop - 2025</info2>
+		</infolist>
+	</outro>
+	<error>
+		<infolist>
+			<info1>That view does not exist!</info1>
+			<info2>Unable to connect to the database!</info2>
+			<info3>That file does not exist!</info3>
+			<info4>Try again later or download gameshop again!</info4>
+			<info5>Press enter to exit.</info5>
+		</infolist>
+	</error>
 </gameshop>

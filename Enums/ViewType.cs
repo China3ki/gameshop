@@ -4,6 +4,7 @@
     Start,
     Register,
     Login,
+    Error,
     Language,
-    Exit,
+    Outro,
 }

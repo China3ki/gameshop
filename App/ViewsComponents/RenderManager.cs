@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace GameShop.App.ViewsComponents
 {
@@ -35,7 +36,7 @@ namespace GameShop.App.ViewsComponents
         }
         public void ChangeColorOfOption(int position, ConsoleKey key)
         {
-            int previousPosition = key == ConsoleKey.UpArrow ? position -= 1 : position += 1;
+            int previousPosition = key == ConsoleKey.UpArrow ? position + 1 : position - 1;
             // Previous position
             Console.SetCursorPosition(2, previousPosition);
             Console.ForegroundColor = _fontColors[previousPosition];

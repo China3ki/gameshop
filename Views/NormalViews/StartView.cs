@@ -1,12 +1,5 @@
 ﻿using GameShop.App.ViewsComponents;
 using GameShop.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameShop.Views.NormalViews
 {
@@ -17,8 +10,22 @@ namespace GameShop.Views.NormalViews
         {
             InitOptionList();
             InitInfoList();
-            _menuManager.InitViewManager();
-            NextView();
+        }
+        public ViewType NextView()
+        {
+            switch (_menuManager.InitViewManager())
+            {
+                case 1:
+                    return ViewType.Login;
+                case 2:
+                    return ViewType.Register;
+                case 3:
+                    return ViewType.Language;
+                case 4:
+                    return ViewType.Outro;
+                default:
+                    return ViewType.Error;
+            }
         }
         protected override void InitInfoList()
         {
@@ -32,22 +39,6 @@ namespace GameShop.Views.NormalViews
             _menuManager.AddElementOfMenu(_menuData[2], ConsoleColor.White, ConsoleColor.Black);
             _menuManager.AddElementOfMenu(_menuData[3], ConsoleColor.White, ConsoleColor.Black);
             _menuManager.AddElementOfMenu(_menuData[4], ConsoleColor.Red, ConsoleColor.Black);
-        }
-        public ViewType NextView()
-        {
-            switch(_menuManager.InitViewManager())
-            {
-                case 1:
-                    return ViewType.Login;
-                case 2:
-                    return ViewType.Register;
-                case 3:
-                    return ViewType.Language;
-                case 4:
-                    return ViewType.Exit;
-                default:
-                    throw new NotImplementedException(); // work;
-            }
         }
     }
 }
