@@ -24,7 +24,7 @@
 		</optionlist>
 	</login>
 	<register>
-		<optionList>
+		<optionlist>
 			<option1>Rejestracja</option1>
 			<option2>Nazwa użytkownika:</option2>
 			<option3>Hasło:</option3>
@@ -32,7 +32,7 @@
 			<option5>Zobacz hasła</option5>
 			<option6>Zarejestruj się</option6>
 			<option7>Powrót</option7>
-		</optionList>
+		</optionlist>
 	</register>
 	<language>
 		<optionlist>

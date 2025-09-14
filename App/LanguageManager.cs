@@ -20,7 +20,7 @@ namespace GameShop.App
             string language = Language == Language.Polski ? "polski.xml" : "angielski.xml";
             string fileLocation = $"..\\..\\..\\Language\\{language}";
             XmlNodeList? nodeList;
-            List<string> list;
+            List<string> list = [];
             string path = GetPath(viewType, dataType);
 
             XmlDocument langDoc = new();
@@ -32,10 +32,15 @@ namespace GameShop.App
             {
                 throw new Exception(e.Message);
             }
-            nodeList = langDoc.SelectNodes(path);
-            if (nodeList != null) list = nodeList.Cast<XmlNode>().Select(n => n.InnerText).ToList(); // Do naprawy
+            nodeList = langDoc.SelectSingleNode(path)?.ChildNodes;
+            if (nodeList != null)
+            {
+                for(int i = 0; i < nodeList.Count; i++)
+                {
+                    list.Add(nodeList[i].InnerText);
+                }
+            }
             else throw new NotImplementedException();
-            Debug.WriteLine(list[1]);
             return list;
         }
         /// <summary>

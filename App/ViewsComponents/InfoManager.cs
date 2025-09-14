@@ -20,7 +20,7 @@
         {
             for(int x = 0; x < Console.WindowWidth; x++)
             {
-                Console.SetCursorPosition(x, Console.WindowHeight - 1 - _info.Count);
+                Console.SetCursorPosition(x, Console.WindowHeight - 2 - _info.Count);
                 if (x == 0) Console.Write('╠');
                 if (x == Console.WindowWidth - 1) Console.Write('╣');
                 else Console.Write('═');
@@ -28,7 +28,7 @@
         }
         private void RenderInfo()
         {
-            for(int i = _info.Count; i > 0; i--)
+            for(int i = _info.Count - 1; i >= 0; i--)
             {
                 Console.SetCursorPosition(2, Console.WindowHeight - 1 - _info.Count + i);
                 Console.ForegroundColor = _fontColors[i];

@@ -17,7 +17,7 @@ namespace GameShop.Views.NormalViews
         protected void GetData()
         {
            _menuData = LanguageManager.GetData(_viewType, DataType.OptionList);
-           _menuData = LanguageManager.GetData(_viewType, DataType.InfoList);
+           _infoData = LanguageManager.GetData(_viewType, DataType.InfoList);
         }
     }
 }

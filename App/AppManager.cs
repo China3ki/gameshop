@@ -31,6 +31,7 @@ namespace GameShop.App
                     break;
                 case ViewType.Start:
                     view = new StartView(ViewType.Start);
+                    view.InitView();
                     break;
                 default:
                     throw new NotImplementedException();

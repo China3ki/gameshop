@@ -2,6 +2,7 @@
 using GameShop.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -14,6 +15,8 @@ namespace GameShop.Views.NormalViews
         private readonly ViewManager _menuManager = new();
         public void InitView()
         {
+            InitOptionList();
+            InitInfoList();
             _menuManager.InitViewManager();
             NextView();
         }
@@ -27,7 +30,8 @@ namespace GameShop.Views.NormalViews
             _menuManager.AddElementOfMenu(_menuData[0], ConsoleColor.Cyan, ConsoleColor.Black);
             _menuManager.AddElementOfMenu(_menuData[1], ConsoleColor.White, ConsoleColor.Black);
             _menuManager.AddElementOfMenu(_menuData[2], ConsoleColor.White, ConsoleColor.Black);
-            _menuManager.AddElementOfMenu(_menuData[3], ConsoleColor.Red, ConsoleColor.Black);
+            _menuManager.AddElementOfMenu(_menuData[3], ConsoleColor.White, ConsoleColor.Black);
+            _menuManager.AddElementOfMenu(_menuData[4], ConsoleColor.Red, ConsoleColor.Black);
         }
         public ViewType NextView()
         {
