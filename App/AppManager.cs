@@ -1,4 +1,5 @@
 ﻿using GameShop.Interfaces;
+using GameShop.Views.FormViews;
 using GameShop.Views.NormalViews;
 using GameShop.Views.SingleViews;
 
@@ -48,6 +49,10 @@ namespace GameShop.App
                     break;
                 case ViewType.Language:
                     view = new LanguageView(ViewType.Language);
+                    view.InitView();
+                    break;
+                case ViewType.Register:
+                    view = new RegisterView(ViewType.Register);
                     view.InitView();
                     break;
                 case ViewType.Outro:

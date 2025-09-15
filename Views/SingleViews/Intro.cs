@@ -1,5 +1,4 @@
-﻿using GameShop.Interfaces;
-using System.Text;
+﻿using System.Text;
 
 namespace GameShop.Views.SingleViews
 {

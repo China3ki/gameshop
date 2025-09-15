@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.Xml.Linq;
-
-namespace GameShop.App.ViewsComponents
+﻿namespace GameShop.App.ViewsComponents
 {
     internal class RenderManager
     {

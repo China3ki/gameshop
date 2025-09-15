@@ -5,7 +5,7 @@ namespace GameShop.Views.NormalViews
 {
     internal class StartView(ViewType viewType) : View(viewType), IViewProvider
     {
-        private readonly ViewManager _menuManager = new();
+        private readonly ViewManager _viewManager = new();
         public void InitView()
         {
             InitOptionList();
@@ -13,7 +13,7 @@ namespace GameShop.Views.NormalViews
         }
         public ViewType NextView()
         {
-            switch (_menuManager.InitViewManager())
+            switch (_viewManager.InitViewManager())
             {
                 case 1:
                     return ViewType.Login;
@@ -29,16 +29,16 @@ namespace GameShop.Views.NormalViews
         }
         protected override void InitInfoList()
         {
-            _menuManager.AddElementOfInfo(_infoData[0], ConsoleColor.White, ConsoleColor.Black);
-            _menuManager.AddElementOfInfo(_infoData[1], ConsoleColor.Yellow, ConsoleColor.Black);
+            _viewManager.AddElementOfInfo(_infoData[0], ConsoleColor.White, ConsoleColor.Black);
+            _viewManager.AddElementOfInfo(_infoData[1], ConsoleColor.Yellow, ConsoleColor.Black);
         }
         protected override void InitOptionList()
         {
-            _menuManager.AddElementOfMenu(_menuData[0], ConsoleColor.Cyan, ConsoleColor.Black);
-            _menuManager.AddElementOfMenu(_menuData[1], ConsoleColor.White, ConsoleColor.Black);
-            _menuManager.AddElementOfMenu(_menuData[2], ConsoleColor.White, ConsoleColor.Black);
-            _menuManager.AddElementOfMenu(_menuData[3], ConsoleColor.White, ConsoleColor.Black);
-            _menuManager.AddElementOfMenu(_menuData[4], ConsoleColor.Red, ConsoleColor.Black);
+            _viewManager.AddElementOfMenu(_menuData[0], ConsoleColor.Cyan, ConsoleColor.Black);
+            _viewManager.AddElementOfMenu(_menuData[1], ConsoleColor.White, ConsoleColor.Black);
+            _viewManager.AddElementOfMenu(_menuData[2], ConsoleColor.White, ConsoleColor.Black);
+            _viewManager.AddElementOfMenu(_menuData[3], ConsoleColor.White, ConsoleColor.Black);
+            _viewManager.AddElementOfMenu(_menuData[4], ConsoleColor.Red, ConsoleColor.Black);
         }
     }
 }

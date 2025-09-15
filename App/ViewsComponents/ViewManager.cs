@@ -1,5 +1,4 @@
-﻿
-namespace GameShop.App.ViewsComponents
+﻿namespace GameShop.App.ViewsComponents
 {
     internal class ViewManager
     {

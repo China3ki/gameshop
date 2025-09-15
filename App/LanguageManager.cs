@@ -1,6 +1,4 @@
-﻿using GameShop.Views.NormalViews;
-using System.Diagnostics;
-using System.Xml;
+﻿using System.Xml;
 
 namespace GameShop.App
 {
@@ -63,6 +61,8 @@ namespace GameShop.App
                 {
                     ViewType.Start => "gameshop/start/optionlist",
                     ViewType.Language => "gameshop/language/optionlist",
+                    ViewType.Login => "gameshop/login/optionlist",
+                    ViewType.Register => "gameshop/register/optionlist",
                     _ => throw new Exception("Url is not correct!")
                 };
             }
@@ -72,6 +72,8 @@ namespace GameShop.App
                 {
                     ViewType.Start => "gameshop/start/infolist",
                     ViewType.Language => "gameshop/language/infolist",
+                    ViewType.Login => "gameshop/login/infolist",
+                    ViewType.Register => "gameshop/register/infolist",
                     ViewType.Outro => "gameshop/outro/infolist",
                     ViewType.Error => "gameshop/error/infolist",
                     _ => throw new Exception("Url is not correct!")

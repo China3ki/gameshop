@@ -15,7 +15,7 @@
 	</start>
 	<login>
 		<optionlist>
-			<option1>Logowanie</option1>
+			<option1> == Logowanie == </option1>
 			<option2>Nazwa użytkownika:</option2>
 			<option3>Hasło:</option3>
 			<option4>Wyświetl hasło</option4>
@@ -25,14 +25,19 @@
 	</login>
 	<register>
 		<optionlist>
-			<option1>Rejestracja</option1>
+			<option1> == Rejestracja == </option1>
 			<option2>Nazwa użytkownika:</option2>
 			<option3>Hasło:</option3>
-			<option4>Powtórzone hasło:</option4>
+			<option4>Potwierdz hasło:</option4>
 			<option5>Zobacz hasła</option5>
 			<option6>Zarejestruj się</option6>
 			<option7>Powrót</option7>
 		</optionlist>
+		<infolist>
+			<info1>Wypełnij wszystkie pola aby się zarejestrować!</info1>
+			<info2>Wymagania:</info2>
+			<info3>- Hasło musi mieć co najmniej 8 znaków w tym jedną Cyfre, jedną duża literę oraz znak specjalny!</info3>
+		</infolist>
 	</register>
 	<language>
 		<optionlist>
