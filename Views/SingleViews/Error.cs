@@ -1,4 +1,4 @@
-﻿using GameShop.App;
+﻿using GameShop.App.Components;
 using GameShop.App.ViewsComponents;
 
 namespace GameShop.Views.SingleViews

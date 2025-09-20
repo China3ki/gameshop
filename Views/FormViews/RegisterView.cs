@@ -1,12 +1,13 @@
-﻿using GameShop.App.ViewsComponents;
+﻿using GameShop.App.Components;
+using GameShop.App.ViewsComponents;
 using GameShop.Interfaces;
 using GameShop.Views.NormalViews;
+using System.Diagnostics;
 
 namespace GameShop.Views.FormViews
 {
     internal class RegisterView(ViewType viewType) : FormView(viewType), IViewProvider
     {
-        InfoManager _infoManager = new();
         public void InitView()
         {
             Console.Clear();
@@ -15,14 +16,40 @@ namespace GameShop.Views.FormViews
             FrameManager.FrameInit();
             _infoManager.InitInfo();
             _form.RenderForm();
-            _form.RunForm();
+            InitForm();
+            
         }
         protected override void InitForm()
         {
+            _form.RunForm();
+            if (_form.GetActionFromField() == FieldType.Submit) FormValidation();
         }
         protected override void FormValidation()
         {
-
+            List<string> validationList = LanguageManager.GetData(ViewType.Validation, DataType.InfoList);
+            string nickname = _form.GetDataFromField(0);
+            string password = _form.GetDataFromField(1);
+            string confirmedPassword = _form.GetDataFromField(2);
+            if (!ValidationManager.InputValidation(nickname, password, confirmedPassword))
+            {
+                UpdateInfo(validationList[0]);
+                return;
+            }
+            if (!ValidationManager.PasswordEqualityValidation(password, confirmedPassword))
+            {
+                UpdateInfo(validationList[1]);
+                return;
+            }
+            if (!ValidationManager.PasswordRequirementsValidation(password))
+            {
+                UpdateInfo(validationList[2]);
+                return;
+            }
+            if (!ValidationManager.AccountValidation(nickname))
+            {
+                UpdateInfo(validationList[3]);
+                return;
+            }
         }
         protected override void InitOptionList()
         {
@@ -41,7 +68,7 @@ namespace GameShop.Views.FormViews
         }
         public ViewType NextView()
         {
-            return ViewType.Start;
+            return _nextView;
         }
     }
 }

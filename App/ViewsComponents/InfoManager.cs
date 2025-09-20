@@ -16,6 +16,19 @@
             _fontColors.Add(fontColor);
             _backgroundColors.Add(backgroundColor);
         } 
+        public void ClearInfo()
+        {
+            for(int y = 0; y < _info.Count + 2; y++)
+            {
+                for(int x = 0; x < Console.WindowWidth; x++)
+                {
+                    Console.SetCursorPosition(x, Console.WindowHeight - y - 2);
+                    if (x == 0 || x == Console.WindowWidth - 1) Console.Write('║');
+                    else Console.Write(' ');
+                }
+            }
+            _info.Clear();
+        }
         private void RenderInfoBorder()
         {
             for(int x = 0; x < Console.WindowWidth; x++)

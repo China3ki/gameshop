@@ -5,6 +5,7 @@
     Register,
     Login,
     Error,
+    Validation,
     Language,
     Outro,
 }

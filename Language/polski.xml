@@ -65,4 +65,12 @@
 			<info5>Kliknij Enter aby wyjść.</info5>
 		</infolist>
 	</error>
+	<validation>
+		<infolist>
+			<info1>Nie wszystkie pola zostały wypełnione!</info1>
+			<info2>Hasła nie są takie same!</info2>
+			<info3>Hasło nie spełnia wymagań!</info3>
+			<info4>Konto o takiej nazwie użytkownika już istnieje!</info4>
+		</infolist>
+	</validation>
 </gameshop>

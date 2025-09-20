@@ -1,6 +1,6 @@
 ﻿using System.Xml;
 
-namespace GameShop.App
+namespace GameShop.App.Components
 {
     static class LanguageManager
     {
@@ -76,6 +76,7 @@ namespace GameShop.App
                     ViewType.Register => "gameshop/register/infolist",
                     ViewType.Outro => "gameshop/outro/infolist",
                     ViewType.Error => "gameshop/error/infolist",
+                    ViewType.Validation => "gameshop/validation/infolist",
                     _ => throw new Exception("Url is not correct!")
                 };
             }

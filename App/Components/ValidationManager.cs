@@ -2,34 +2,30 @@
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
-namespace GameShop.App
+namespace GameShop.App.Components
 {
     static class ValidationManager
     {
         static private string _connString = "server=localhost;uid=root; database=gameshop"; 
-        static public string[] InitValidation(string nickname, string password, string confirmedPassword)
-        {
-
-        }
-        static private bool InputValidation(string nickname, string password, string confirmedPassword)
+        static public bool InputValidation(string nickname, string password, string confirmedPassword)
         {
             if (nickname.Length == 0 || password.Length == 0 || confirmedPassword.Length == 0) return false;
             else return true;
         }
-        static private bool PasswordEqualityValidation(string password, string confirmedPassword)
+        static public bool PasswordEqualityValidation(string password, string confirmedPassword)
         {
             return password == confirmedPassword;
         }
-        static private bool PasswordRequirementsValidation(string password)
+        static public bool PasswordRequirementsValidation(string password)
         {
             bool eightLetters = password.Length == 8;
             bool bigLetter = password.Any(char.IsUpper);
             bool number = Regex.IsMatch(password, @"\d");
             bool specialCharacter = Regex.IsMatch(password, @"[^\\p{L}\\p{N}\\s]");
-            if (eightLetters && bigLetter && number && specialCharacter) return true;
+            if (eightLetters && bigLetter && number) return true;
             else return false;
         }
-        static private bool AccountValidation(string nickname)
+        static public bool AccountValidation(string nickname)
         {
             try
             {

@@ -1,4 +1,4 @@
-﻿using GameShop.App;
+﻿using GameShop.App.Components;
 namespace GameShop.Views.SingleViews
 {
     internal class Outro(ViewType viewType, string[] info) : InfoView(viewType, info)
