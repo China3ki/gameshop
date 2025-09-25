@@ -25,7 +25,7 @@
 	</login>
 	<register>
 		<optionlist>
-			<option1>Register</option1>
+			<option1> == Register == </option1>
 			<option2>Nickname:</option2>
 			<option3>Password:</option3>
 			<option4>Repeat password:</option4>
@@ -33,6 +33,11 @@
 			<option6>Register</option6>
 			<option7>Back</option7>
 		</optionlist>
+		<infolist>
+			<info1>Fill in all the fields to register!</info1>
+			<info2>Requirements:</info2>
+			<info3>- The password must be at least 8 characters long, one digit, one uppercase letter, and one special character!</info3>
+		</infolist>
 	</register>
 	<language>
 		<optionlist>
@@ -57,7 +62,7 @@
 			<info2>Unable to connect to the database!</info2>
 			<info3>That file does not exist!</info3>
 			<info4>Try again later or download gameshop again!</info4>
-			<info5>Press enter to exit.</info5>
+			<info5>Press Enter to exit.</info5>
 		</infolist>
 	</error>
 	<validation>
@@ -68,4 +73,11 @@
 			<info4>Account already exist!</info4>
 		</infolist>
 	</validation>
+	<succesfulregistration>
+		<infolist>
+			<info1>Your registration is complete!</info1>
+			<info2>Welcome To gameshop!</info2>
+			<info3>Press Enter to continue!</info3>
+		</infolist>
+	</succesfulregistration>
 </gameshop>

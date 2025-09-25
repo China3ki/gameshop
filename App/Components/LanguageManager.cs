@@ -77,6 +77,7 @@ namespace GameShop.App.Components
                     ViewType.Outro => "gameshop/outro/infolist",
                     ViewType.Error => "gameshop/error/infolist",
                     ViewType.Validation => "gameshop/validation/infolist",
+                    ViewType.SuccesfulRegistration => "gameshop/succesfulregistration/infolist",
                     _ => throw new Exception("Url is not correct!")
                 };
             }

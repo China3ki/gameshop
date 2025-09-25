@@ -1,5 +1,6 @@
 ﻿using GameShop.Views.SingleViews;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace GameShop.App.Components
 {
@@ -12,7 +13,8 @@ namespace GameShop.App.Components
             {
                 using (MySqlConnection conn = new("server=localhost;uid=root; database=gameshop"))
                 {
-                    MySqlCommand command = new("INSERT INTO users (user_type, user_nickname, user_password) VALUES (user, @nickname, @password)");
+                    conn.Open();
+                    MySqlCommand command = new("INSERT INTO users (user_type, user_nickname, user_password) VALUES (1, @nickname, @password)", conn);
                     command.Parameters.AddWithValue("@nickname", nickname.Trim());
                     command.Parameters.AddWithValue("@password", password);
                     command.ExecuteNonQuery();
@@ -24,10 +26,6 @@ namespace GameShop.App.Components
                 error.InitView();
                 Environment.Exit(0);
                 throw new Exception("Failed connection!");
-            }
-             finally
-            {
-
             }
         }
     }

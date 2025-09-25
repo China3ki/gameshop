@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="FormController">
       <HintPath>..\..\FormController\FormController\bin\Debug\net8.0\FormController.dll</HintPath>
     </Reference>

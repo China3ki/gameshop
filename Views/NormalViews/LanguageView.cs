@@ -1,7 +1,6 @@
 ﻿using GameShop.App.Components;
 using GameShop.App.ViewsComponents;
 using GameShop.Interfaces;
-using System.Diagnostics;
 
 namespace GameShop.Views.NormalViews
 {

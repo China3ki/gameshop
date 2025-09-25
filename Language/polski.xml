@@ -73,4 +73,11 @@
 			<info4>Konto o takiej nazwie użytkownika już istnieje!</info4>
 		</infolist>
 	</validation>
+	<succesfulregistration>
+		<infolist>
+			<info1>Udało ci się pomyślnie zarejestrować!</info1>
+			<info2>Witamy w gameshopie!</info2>
+			<info3>Kliknij Enter aby kontynuować!</info3>
+		</infolist>
+	</succesfulregistration>
 </gameshop>

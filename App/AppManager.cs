@@ -60,6 +60,10 @@ namespace GameShop.App
                     view.InitView();
                     _run = false;
                     break;
+                case ViewType.SuccesfulRegistration:
+                    view = new SuccesfulRegistration(ViewType.Start, [" __        __   _                          ", " \\ \\      / /__| | ___ ___  _ __ ___   ___ ", "  \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\", "   \\ V  V /  __/ | (_| (_) | | | | | |  __/", "    \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|", "                                           "]);
+                    view.InitView();
+                    break;
                 default:
                     view = new Error(ViewType.Error, ["  _____                     ", " | ____|_ __ _ __ ___  _ __ ", " |  _| | '__| '__/ _ \\| '__|", " | |___| |  | | | (_) | |   ", " |_____|_|  |_|  \\___/|_|   ", "                            "], ErrorType.WrongViewType);
                     view.InitView();

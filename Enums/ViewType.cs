@@ -3,6 +3,7 @@
     Intro,
     Start,
     Register,
+    SuccesfulRegistration,
     Login,
     Error,
     Validation,
