@@ -22,6 +22,9 @@
 			<option5>Logowanie</option5>
 			<option6>Powrót</option6>
 		</optionlist>
+		<infolist>
+			<info1>Wypełnij wszystkie pola aby się zalogować!</info1>
+		</infolist>
 	</login>
 	<register>
 		<optionlist>
@@ -71,6 +74,7 @@
 			<info2>Hasła nie są takie same!</info2>
 			<info3>Hasło nie spełnia wymagań!</info3>
 			<info4>Konto o takiej nazwie użytkownika już istnieje!</info4>
+			<info5>Konto nie istnieje lub zostały wprowadzone nieprawidłowe dane!</info5>
 		</infolist>
 	</validation>
 	<succesfulregistration>
@@ -80,4 +84,22 @@
 			<info3>Kliknij Enter aby kontynuować!</info3>
 		</infolist>
 	</succesfulregistration>
+	<succesfulLogin>
+		<infolist>
+			<info1>Witaj ponownie</info1>
+		</infolist>
+	</succesfulLogin>
+	<adminmainmenu>
+		<optionlist>
+			<option1> == Główne menu == </option1>
+			<option2>Zobacz książki</option2>
+			<option3>Dodaj książkę</option3>
+			<option4>Lista użytkowników</option4>
+			<option5>Wyloguj się</option5>
+			<option6>Wyjdź</option6>
+		</optionlist>
+		<infolist>
+			<info1>Witaj</info1>
+		</infolist>
+	</adminmainmenu>
 </gameshop>

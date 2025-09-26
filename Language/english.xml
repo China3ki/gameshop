@@ -15,13 +15,16 @@
 	</start>
 	<login>
 		<optionlist>
-			<option1>Login</option1>
+			<option1> == Login == </option1>
 			<option2>Nickname:</option2>
 			<option3>Password:</option3>
 			<option4>View password</option4>
 			<option5>Login</option5>
 			<option6>Back</option6>
 		</optionlist>
+		<infolist>
+			<info1>Complete all fields to log in!</info1>
+		</infolist>
 	</login>
 	<register>
 		<optionlist>
@@ -71,6 +74,7 @@
 			<info2>Passwords are not the same!</info2>
 			<info3>Password does not fit the requiremensts!</info3>
 			<info4>Account already exist!</info4>
+			<info5>Account does not exist or data are incorrect!</info5>
 		</infolist>
 	</validation>
 	<succesfulregistration>
@@ -80,4 +84,22 @@
 			<info3>Press Enter to continue!</info3>
 		</infolist>
 	</succesfulregistration>
+	<succesfulLogin>
+		<infolist>
+			<info1>Welcome back</info1>
+		</infolist>
+	</succesfulLogin>
+	<adminmainmenu>
+		<optionlist>
+			<option1> == Main menu == </option1>
+			<option2>Look books</option2>
+			<option3>Add book</option3>
+			<option4>User list</option4>
+			<option5>Logout</option5>
+			<option6>Exit</option6>
+		</optionlist>
+		<infolist>
+			<info1>Welcome</info1>
+		</infolist>
+	</adminmainmenu>
 </gameshop>

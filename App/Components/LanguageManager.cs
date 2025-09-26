@@ -63,6 +63,7 @@ namespace GameShop.App.Components
                     ViewType.Language => "gameshop/language/optionlist",
                     ViewType.Login => "gameshop/login/optionlist",
                     ViewType.Register => "gameshop/register/optionlist",
+                    ViewType.AdminMainMenu => "gameshop/adminmainmenu/optionlist",
                     _ => throw new Exception("Url is not correct!")
                 };
             }
@@ -78,6 +79,8 @@ namespace GameShop.App.Components
                     ViewType.Error => "gameshop/error/infolist",
                     ViewType.Validation => "gameshop/validation/infolist",
                     ViewType.SuccesfulRegistration => "gameshop/succesfulregistration/infolist",
+                    ViewType.SuccesfulLogin => "gameshop/succesfullogin/infolist",
+                    ViewType.AdminMainMenu => "gameshop/adminmainmenu/infolist",
                     _ => throw new Exception("Url is not correct!")
                 };
             }

@@ -12,7 +12,6 @@ namespace GameShop.Views.FormViews
             FrameManager.FrameInit();
             InitOptionList();
             InitInfoList();
-            _infoManager.InitInfo();
             _form.RenderForm();
             InitForm();
             
@@ -77,6 +76,7 @@ namespace GameShop.Views.FormViews
             _infoManager.AddElement(_infoData[0], ConsoleColor.Yellow, ConsoleColor.Black);
             _infoManager.AddElement(_infoData[1], ConsoleColor.White, ConsoleColor.Black);
             _infoManager.AddElement(_infoData[2], ConsoleColor.DarkYellow, ConsoleColor.Black);
+            _infoManager.InitInfo();
         }
         public ViewType NextView()
         {

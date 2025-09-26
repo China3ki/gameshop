@@ -13,10 +13,13 @@ namespace GameShop.App.Components
     static class ValidationManager
     {
         static private string _connString = "server=localhost;uid=root; database=gameshop"; 
-        static public bool InputValidation(string nickname, string password, string confirmedPassword)
+        static public bool InputValidation(params string[] inputs)
         {
-            if (nickname.Length == 0 || password.Length == 0 || confirmedPassword.Length == 0) return false;
-            else return true;
+            for(int i = 0; i < inputs.Length; i++)
+            {
+                if (inputs[i].Length == 0) return false; 
+            }
+            return true;
         }
         static public bool PasswordEqualityValidation(string password, string confirmedPassword)
         {
@@ -43,6 +46,30 @@ namespace GameShop.App.Components
                     int nicknameCounter = Convert.ToInt32(command.ExecuteScalar());
                     conn.Close();
                     return nicknameCounter == 0;
+                }
+            }
+            catch
+            {
+                Error error = new(ViewType.Error, ["  _____                     ", " | ____|_ __ _ __ ___  _ __ ", " |  _| | '__| '__/ _ \\| '__|", " | |___| |  | | | (_) | |   ", " |_____|_|  |_|  \\___/|_|   ", "                            "], ErrorType.FailedConnection);
+                error.InitView();
+                Environment.Exit(0);
+                throw new Exception("Failed connection!");
+            }
+        }
+        
+        static public bool AccountValidation(string nickname, string password)
+        {
+            try
+            {
+                using (MySqlConnection conn = new(_connString))
+                {
+                    conn.Open();
+                    MySqlCommand command = new("SELECT user_id FROM users WHERE user_nickname = @nickname AND user_password = @password", conn);
+                    command.Parameters.AddWithValue("nickname", nickname);
+                    command.Parameters.AddWithValue("password", password);
+                    int nicknameCounter = Convert.ToInt32(command.ExecuteScalar());
+                    conn.Close();
+                    return nicknameCounter > 0;
                 }
             }
             catch

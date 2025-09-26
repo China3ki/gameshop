@@ -1,7 +1,11 @@
-﻿using GameShop.Interfaces;
+﻿using GameShop.App.Components;
+using GameShop.Interfaces;
+using GameShop.Views.AdminViews;
 using GameShop.Views.FormViews;
+using GameShop.Views.InfoViews;
 using GameShop.Views.NormalViews;
 using GameShop.Views.SingleViews;
+using System.Diagnostics;
 
 namespace GameShop.App
 {
@@ -37,7 +41,7 @@ namespace GameShop.App
         private void ContentManagement()
         {
             IViewProvider view;
-            switch( _currentView)
+            switch(_currentView)
             {
                 case ViewType.Intro:
                     view = new Intro(ViewType.Start, ["   ____                      ____  _                 ", "  / ___| __ _ _ __ ___   ___/ ___|| |__   ___  _ __  ", " | |  _ / _` | '_ ` _ \\ / _ \\___ \\| '_ \\ / _ \\| '_ \\ ", " | |_| | (_| | | | | | |  __/___) | | | | (_) | |_) |", "  \\____|\\__,_|_| |_| |_|\\___|____/|_| |_|\\___/| .__/ ", "                                              |_|    "]);
@@ -55,6 +59,10 @@ namespace GameShop.App
                     view = new RegisterView(ViewType.Register);
                     view.InitView();
                     break;
+                case ViewType.Login:
+                    view = new LoginView(ViewType.Login);
+                    view.InitView();
+                    break;
                 case ViewType.Outro:
                     view = new Outro(ViewType.Outro, ["   ____                      ____  _                 ", "  / ___| __ _ _ __ ___   ___/ ___|| |__   ___  _ __  ", " | |  _ / _` | '_ ` _ \\ / _ \\___ \\| '_ \\ / _ \\| '_ \\ ", " | |_| | (_| | | | | | |  __/___) | | | | (_) | |_) |", "  \\____|\\__,_|_| |_| |_|\\___|____/|_| |_|\\___/| .__/ ", "                                              |_|    "]);
                     view.InitView();
@@ -62,6 +70,15 @@ namespace GameShop.App
                     break;
                 case ViewType.SuccesfulRegistration:
                     view = new SuccesfulRegistration(ViewType.Start, [" __        __   _                          ", " \\ \\      / /__| | ___ ___  _ __ ___   ___ ", "  \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\", "   \\ V  V /  __/ | (_| (_) | | | | | |  __/", "    \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|", "                                           "]);
+                    view.InitView();
+                    break;
+                case ViewType.SuccesfulLogin:
+                   ViewType nextView = UserManager.AccountType == AccountType.User ? ViewType.UserMainMenu : ViewType.AdminMainMenu;
+                    view = new SuccesfulLogin(nextView, [" __        __   _                            ____             _    ", " \\ \\      / /__| | ___ ___  _ __ ___   ___  | __ )  __ _  ___| | __", "  \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |  _ \\ / _` |/ __| |/ /", "   \\ V  V /  __/ | (_| (_) | | | | | |  __/ | |_) | (_| | (__|   < ", "    \\\\_/\\\\_/ \\\\___|_|\\\\___\\\\___/|_| |_| |_|\\\\___| |____/ \\\\__,_|\\\\___|_|\\\\_\\\\\\", "                                                                   "]);
+                    view.InitView();
+                    break;
+                case ViewType.AdminMainMenu:
+                    view = new AdminMainMenu(ViewType.AdminMainMenu);
                     view.InitView();
                     break;
                 default:
