@@ -92,8 +92,8 @@
 	<adminmainmenu>
 		<optionlist>
 			<option1> == Główne menu == </option1>
-			<option2>Zobacz książki</option2>
-			<option3>Dodaj książkę</option3>
+			<option2>Zobacz gry</option2>
+			<option3>Dodaj grę</option3>
 			<option4>Lista użytkowników</option4>
 			<option5>Wyloguj się</option5>
 			<option6>Wyjdź</option6>
@@ -102,4 +102,10 @@
 			<info1>Witaj</info1>
 		</infolist>
 	</adminmainmenu>
+	<adminAddMenu>
+		<optionlist>
+			<option1> == Dodaj grę == </option1>
+			<option2>Nazwa:</option2>
+		</optionlist>
+	</adminAddMenu>
 </gameshop>

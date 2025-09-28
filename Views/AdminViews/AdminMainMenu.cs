@@ -2,7 +2,6 @@
 using GameShop.App.ViewsComponents;
 using GameShop.Interfaces;
 using GameShop.Views.NormalViews;
-using System.Diagnostics;
 
 namespace GameShop.Views.AdminViews
 {
@@ -20,6 +19,16 @@ namespace GameShop.Views.AdminViews
             {
                 case 1:
                     return ViewType.Intro;
+                case 2:
+                    return ViewType.Intro;
+                case 3:
+                    return ViewType.Intro;
+                case 4:
+                    UserManager.Logout();
+                    return ViewType.Start;
+                case 5:
+                    UserManager.Logout();
+                    return ViewType.Outro;
                 default:
                     return ViewType.Intro;
             }

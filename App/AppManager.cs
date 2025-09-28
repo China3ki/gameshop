@@ -5,7 +5,7 @@ using GameShop.Views.FormViews;
 using GameShop.Views.InfoViews;
 using GameShop.Views.NormalViews;
 using GameShop.Views.SingleViews;
-using System.Diagnostics;
+
 
 namespace GameShop.App
 {
@@ -74,7 +74,7 @@ namespace GameShop.App
                     break;
                 case ViewType.SuccesfulLogin:
                    ViewType nextView = UserManager.AccountType == AccountType.User ? ViewType.UserMainMenu : ViewType.AdminMainMenu;
-                    view = new SuccesfulLogin(nextView, [" __        __   _                            ____             _    ", " \\ \\      / /__| | ___ ___  _ __ ___   ___  | __ )  __ _  ___| | __", "  \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |  _ \\ / _` |/ __| |/ /", "   \\ V  V /  __/ | (_| (_) | | | | | |  __/ | |_) | (_| | (__|   < ", "    \\\\_/\\\\_/ \\\\___|_|\\\\___\\\\___/|_| |_| |_|\\\\___| |____/ \\\\__,_|\\\\___|_|\\\\_\\\\\\", "                                                                   "]);
+                    view = new SuccesfulLogin(nextView, [" __        __   _                            _                _    ", " \\ \\      / /__| | ___ ___  _ __ ___   ___  | |__   __ _  ___| | __", "  \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ | '_ \\ / _` |/ __| |/ /", "   \\ V  V /  __/ | (_| (_) | | | | | |  __/ | |_) | (_| | (__|   < ", "    \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___| |_.__/ \\__,_|\\___|_|\\_\\", "                                                                   "]);
                     view.InitView();
                     break;
                 case ViewType.AdminMainMenu:

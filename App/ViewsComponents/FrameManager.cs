@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using GameShop.App.Components;
+using System.Text;
 
 namespace GameShop.App.ViewsComponents
 {
@@ -32,6 +33,15 @@ namespace GameShop.App.ViewsComponents
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.Write(logo);
             Console.ResetColor();
+            // Username
+            if (UserManager.Logged)
+            {
+                string username = $" | {UserManager.UserNickname} | ";
+                Console.SetCursorPosition((width - username.Length) / 2, Console.WindowHeight - 1);
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write(username);
+                Console.ResetColor();
+            }
         }
     }
 }

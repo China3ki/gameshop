@@ -1,7 +1,4 @@
 ﻿using GameShop.App;
-using System.Diagnostics;
-using System.Xml;
-
 namespace GameShop
 {
     internal class Program

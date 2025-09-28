@@ -7,6 +7,7 @@ namespace GameShop.App.Components
     {
         static public string UserNickname { get; set; } = "";
         static public AccountType AccountType { get; set; }
+        static public bool Logged = false;
         
         static public void AddNewUser(string nickname, string password)
         {
@@ -45,6 +46,7 @@ namespace GameShop.App.Components
                         AccountType = data.GetString("type") == "user" ? AccountType.User : AccountType.Admin;
                     }
                     conn.Close();
+                    Logged = true;
                 }
             }
             catch
@@ -54,6 +56,11 @@ namespace GameShop.App.Components
                 Environment.Exit(0);
                 throw new Exception("Failed connection!");
             }
+        }
+        static public void Logout()
+        {
+            UserNickname = "";
+            Logged = false;
         }
     }
 }

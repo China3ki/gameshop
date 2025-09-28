@@ -11,5 +11,6 @@
     Language,
     Outro,
     UserMainMenu,
-    AdminMainMenu
+    AdminMainMenu,
+    AdminAddMenu
 }
